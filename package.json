@@ -21,7 +21,7 @@
         "test:e2e": "jest --config ./test/jest-e2e.json"
     },
     "dependencies": {
-        "@wodo-platform/wodo-nodejs-persistence": "1.0.6",
+        "@wodo-platform/wodo-nodejs-persistence": "1.0.7",
         "@nestjs/common": "^7.6.15",
         "@nestjs/core": "^7.6.15",
         "@nestjs/schedule": "^0.4.3",
