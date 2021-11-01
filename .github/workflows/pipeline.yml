@@ -12,6 +12,7 @@ env:
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
+  NPM_TOKEN: ${{ secrets.WODO_TOKEN }}
 
 jobs:
   build:
