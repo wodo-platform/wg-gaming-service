@@ -1,4 +1,44 @@
-# wodo-gameserver-service repository
+<p align="center">
+  <a href="http://wodoplatform.io/" target="blank"><img src="https://github.com/wodo-platform/wodo-docs/blob/main/images/wodo_logo.png" width="320" alt="Wodo Gaming Lounge" /></a>
+</p>
+
+<h2> Wodo Gaming Lounge Service </h2>
+
+<div align="center">
+  <h4>
+    <a href="#">
+      Website
+    </a>
+    <span> | </span>
+    <a href="#">
+      Product Docs
+    </a>
+    <span> | </span>
+    <a href="#">
+      Architecture Docs
+    </a>
+    <span> | </span>
+    <!-- <a href="#"> -->
+    <!--   CLI -->
+    <!-- </a> -->
+    <!-- <span> | </span> -->
+    <a href="#/CONTRIBUTING.md">
+      Contributing
+    </a>
+    <span> | </span>
+    <a href="#">
+      Reddit
+    </a>
+    <span> | </span>
+    <a href="#">
+      Twitter
+    </a>
+  </h4>
+</div>
+
+<h3> Table of Contents </h3> 
+
+- [About](#about)
 
 ## build instructions
 
