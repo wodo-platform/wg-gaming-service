@@ -1,6 +1,6 @@
 {
   "name": "wp-gameserver-service",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Game Server service to manage, add, update game servers",
   "author": "Wodo Platform",
   "repository": {
