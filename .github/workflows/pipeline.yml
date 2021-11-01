@@ -30,7 +30,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - run: npm install
+      - name: Install dependencies
+        run: |
+          echo "@wodo-platform:registry=https://npm.pkg.github.com/" > .npmrc
+          echo "//npm.pkg.github.com/:_authToken=$NPM_TOKEN" >> .npmrc
+          npm install
+          rm -f .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.WODO_TOKEN }}
       #- run: npm test 
        
       # Login against a Docker registry except
