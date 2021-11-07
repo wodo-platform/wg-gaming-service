@@ -1,7 +1,7 @@
 {
   "name": "wg-gaming-service",
   "version": "1.0.1",
-  "description": "Wodo Gaming service to manage, add, update game servers",
+  "description": "Wodo Gaming service to manage gaming lounges, gaming servers and overall gaming experince flows.",
   "author": "Wodo Platform",
   "repository": {
     "url": "git@github.com:wodo-platform/wg-gaming-service.git"
