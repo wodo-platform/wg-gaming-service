@@ -1,10 +1,13 @@
 import { NestFactory } from '@nestjs/core';
 import { ApplicationModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { Logger } from 'nestjs-pino';
 
 async function bootstrap() {
-  const appOptions = {cors: true};
+  const appOptions = {cors: true, bufferLogs: true};
   const app = await NestFactory.create(ApplicationModule, appOptions);
+  app.useLogger(app.get(Logger));
+
   const options = new DocumentBuilder()
     .setTitle('Wodo Game Lounge API')
     .setDescription('Wodo Lounge microservice in order to handle business logic for game lounge and game server relaated cases.')

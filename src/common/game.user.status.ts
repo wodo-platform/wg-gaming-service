@@ -20,5 +20,5 @@ export const GAME_USER_FINISHED : GameUserStatus = {
 
 export const GAME_USER_LEFT : GameUserStatus = {
     id : 4,
-    name: "finished"
+    name: "left"
 }

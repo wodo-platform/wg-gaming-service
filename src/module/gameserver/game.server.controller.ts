@@ -1,11 +1,11 @@
 import { GameServer, GameServerData, GameServerUser } from '.prisma/client';
 import { Get, Post, Body, Put, Delete, Param, Query, Controller, UsePipes,ParseIntPipe } from '@nestjs/common';
 import { ApiBearerAuth, ApiOperation, ApiResponse, ApiTags, ApiParam } from '@nestjs/swagger';
-import { GameServerService } from '../../service/gameserver/game.server.service';
-import GameServerCreateParams from '../../service/gameserver/model/game.server.create.params';
-import GameServerUpdateParams from '../../service/gameserver/model/game.server.update.params';
-import JoinGameParams from '../../service/gameserver/model/join.game.params';
-import RejoinGameParams from '../../service/gameserver/model/rejoin.game.params';
+import { GameServerService } from './game.server.service';
+import GameServerCreateParams from './model/game.server.create.params';
+import GameServerUpdateParams from './model/game.server.update.params';
+import JoinGameParams from './model/join.game.params';
+import RejoinGameParams from './model/rejoin.game.params';
 
 
 @ApiBearerAuth()

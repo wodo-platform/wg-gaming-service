@@ -1,7 +1,7 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
-import { PrismaService } from '../service/prisma.service';
-import { GameServerService } from '../service/gameserver/game.server.service';
-import { GameServerController } from '../controller/gameserver/game.server.controller';
+import { PrismaService } from '../../service/prisma.service';
+import { GameServerService } from './game.server.service';
+import { GameServerController } from './game.server.controller';
 
 @Module({
   imports: [ 

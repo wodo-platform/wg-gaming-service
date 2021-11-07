@@ -1,6 +1,6 @@
 import { Get, Post, Body, Put, Delete, Param, Query, Controller, UsePipes, ParseIntPipe, ParseBoolPipe } from '@nestjs/common';
 import {ApiParam,ApiBearerAuth,ApiResponse,ApiOperation, ApiTags, ApiQuery,} from '@nestjs/swagger';
-import { GameServerNotificationService } from '../../service/notification/game.server.notification.service';
+import { GameServerNotificationService } from './game.server.notification.service';
 
 
 @ApiBearerAuth()

@@ -1,6 +1,6 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
-import { GameServerNotificationService } from '../service/notification/game.server.notification.service';
-import { NotificationController } from '../controller/notification/notification.controller';
+import { GameServerNotificationService } from './game.server.notification.service';
+import { NotificationController } from './notification.controller';
 
 @Module({
   imports: [

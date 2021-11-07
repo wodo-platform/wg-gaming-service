@@ -1,5 +1,5 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { PrismaService } from '../prisma.service';
+import { PrismaService } from '../../service/prisma.service';
 import { GameServer, GameServerData, GameServerUser, GameServerUserData } from '.prisma/client';
 import GameServerCreateParams from './model/game.server.create.params';
 import GameServerDataCreateParams from './model/game.server.data.create.params';
@@ -85,19 +85,22 @@ export class GameServerService {
       throw new Error(`Game server[${gameServer}] has been created but there is no user playing the game. What the fuck`); // TODO: handle this case later. This might happen. Premature ending of a game server.
     }
 
-    // TODO: split up game server envents and logs in order to not process a large log file each time..
-    let gameServerLog:GameServerLog = JSON.parse(gameServer.data.toString()) as GameServerLog;
-    let gameLeaderBoard: GameLeaderBoard = gameServerLog.leaderBoard;
-    let gamePlayers:GamePlayer[] = gameLeaderBoard.users;
+    // TODO: split up game server event and logs in order to not process a large log file each time..
+    let gameServerLog:GameServerLog | null = gameServer.data ? JSON.parse(gameServer.data.toString()) as GameServerLog : null;
+    if(gameServerLog) {
+      let gameLeaderBoard: GameLeaderBoard = gameServerLog.leaderBoard;
+      let gamePlayers:GamePlayer[] = gameLeaderBoard.users;
 
-    gamePlayers.forEach(gamePlayers => {
-      this.logger.debug(`processing score of game player[${gamePlayers}]`);
-    });
+      gamePlayers.forEach(gamePlayers => {
+        this.logger.debug(`processing score of game player[${gamePlayers}]`);
+      });
+    }
+    
 
     let gameServerDataCreateParams: GameServerDataCreateParams =  {
       type: gameServer.type,
       assetId: gameServer.assetId,
-      data: gameServer.data.toString(),
+      data: gameServer.data ? gameServer.data.toString() : "",
       totalAmount: gameServer.totalAmount,
       revenue: gameServer.revenue
     };
@@ -189,8 +192,8 @@ export class GameServerService {
     this.logger.debug(`user[${rejoinGameParams.userId}] is re-joining the game server[${rejoinGameParams.gameServerId}]. params[${JSON.stringify(rejoinGameParams)}]`);
     let gameServerUser:GameServerUser = await this.findUserInGameServer(rejoinGameParams.userId,rejoinGameParams.gameServerId);
 
-    if(!(gameServerUser)) {
-      throw new Error(`user[${gameServerUser.assetId}] has not joined the gamne server[${gameServerUser.gameServerId}], can not rejoin.`);
+    if(!gameServerUser) {
+      throw new Error(`user[${rejoinGameParams.userId}] has not joined the game server[${rejoinGameParams.gameServerId}], can not rejoin.`);
     }
 
     this.logger.debug(`user[${rejoinGameParams.userId}] has re-joininged the game server[${rejoinGameParams.gameServerId}]. gameServerUser[${JSON.stringify(gameServerUser)}]`);

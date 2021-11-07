@@ -1,5 +1,5 @@
 import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/common';
-import { TaskManager } from '../service/scheduler/task.manager.service';
+import { TaskManager } from './task.manager.service';
 
 
 @Module({
