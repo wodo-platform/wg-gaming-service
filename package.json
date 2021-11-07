@@ -1,10 +1,10 @@
 {
-  "name": "wp-gameserver-service",
-  "version": "1.0.0",
-  "description": "Game Server service to manage, add, update game servers",
+  "name": "wg-gaming-service",
+  "version": "1.0.1",
+  "description": "Wodo Gaming service to manage, add, update game servers",
   "author": "Wodo Platform",
   "repository": {
-    "url": "git@github.com:wodo-platform/wp-gameserver-service.git"
+    "url": "git@github.com:wodo-platform/wg-gaming-service.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
