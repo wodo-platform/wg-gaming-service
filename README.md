@@ -1,12 +1,14 @@
 <p align="center">
-  <a href="http://wodoplatform.io/" target="blank"><img src="https://github.com/wodo-platform/wodo-docs/blob/main/images/wodo_logo.png" width="320" alt="Wodo Gaming Lounge" /></a>
+  <a href="https://wodo.io/" target="blank"><img src="https://github.com/wodo-platform/wg-web-ui/blob/master/app/img/_src/branding/logo_purple.png" width="320" alt="Wodo Platform" /></a>
 </p>
 
+<div align="center">
 <h2> Wodo Gaming Lounge Service </h2>
+</div>
 
 <div align="center">
   <h4>
-    <a href="#">
+    <a href="https://wodo.io/">
       Website
     </a>
     <span> | </span>
@@ -26,12 +28,24 @@
       Contributing
     </a>
     <span> | </span>
-    <a href="#">
-      Reddit
+    <a href="https://twitter.com/wodoio">
+      Twitter
     </a>
     <span> | </span>
-    <a href="#">
-      Twitter
+    <a href="https://t.me/wodoio">
+      Telegram
+    </a>
+    <span> | </span>
+    <a href="https://discord.gg/fbyns8Egpb">
+      Discourd
+    </a>
+    <span> | </span>
+    <a href="https://wodoio.medium.com/">
+      Medium
+    </a>
+    <span> | </span>
+    <a href="https://www.reddit.com/r/wodoio">
+      Reddit
     </a>
   </h4>
 </div>
